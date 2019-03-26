@@ -1,3 +1,249 @@
-/**
- TODO(you): Add CSS for the list that you create yourself!
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/*
+.container {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.parallax-container {
+    perspective: 1px;
+}
+
+.parallax-child {
+    position: -webkit-sticky;
+    top: 0px;
+    transform: translate(-2px) scale(3);
+}
 */
+.bg{
+    min-height: 100%;
+    position: relative;
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-1{
+    background-image: url(../images2/Kinmen.jpg);
+}
+
+.bg-2{
+    background-image: url(../images2/Kinmen_Kaoliang_Liquor_Inc..jpg);
+}
+
+.bg-3{
+    background-image: url(../images2/candy_bg.jpg);
+}
+
+.bg-4{
+    background-image: url(../images2/knife_bg.jpg);
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    bottom:3%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.border{
+    color: #000000;
+    padding: 18px;
+    font-size: 72px;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.author{
+    height: 30%;
+    display: flex;
+    background: #777777;
+}
+
+.head{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-image{
+    max-width: 80%;
+    border-radius:50%;
+    z-index: 10;
+}
+
+.head-info{
+    width: 80%;
+    height: 20%;
+    display: block;
+}
+
+#name-area{
+    margin: 1rem 0 1rem 0;
+}
+
+#name{
+    font: 2rem "Lato", sans-serif;
+}
+
+.img-from{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: #322e3d;
+    color: #e1d4e3;
+}
+
+.img-from-link{
+    color: #4ea5ff;
+    text-decoration: none;
+    text-shadow:1px 1px #322e3d, -1px -1px #4ea5ff;
+}
+
+.img-from-link:hover{
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.content-area{
+    width: 80%;
+    padding: 5rem;
+    color: azure;
+    background: rgba(51, 51, 51, 0.75);
+    border-radius:50%;
+    min-height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.title-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    float: left;
+    max-width: 80%;
+}
+
+.content-paragraph{
+    font-size: 1rem;
+    text-indent : 2rem;
+}
+
+.content-image-area{
+    max-width: 20%;
+    float: right;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content-image{
+    width: 50%;
+}
+
+.image-flow{
+    width: 1280px;
+    height: 12rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-flow img{
+    border-radius:50%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    -webkit-animation: round 15s linear infinite;
+    animation: round 15s linear infinite;
+}
+@-webkit-keyframes round {
+    7% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    40% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    42% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    7% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    35% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    42% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+.image-flow img:nth-child(3) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.image-flow img:nth-child(2) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.image-flow img:nth-child(1) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.image-flow:hover img {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
